@@ -1,27 +1,32 @@
-# Flux Image Generator AI
+# Flux Image Generator API
 
-Welcome to the **Flux Image Generator AI** repository! This Node.js application leverages artificial intelligence to generate high-quality images based on customizable parameters.
+Welcome to the **Flux Image Generator API**! This Node.js application allows you to generate high-quality images using Hugging Face's image generation models.
 
 ## Overview
 
-Flux Image Generator AI is designed for developers and artists who want to create visually appealing images using AI. It offers flexibility and ease of integration into various Node.js applications.
+Flux Image Generator API provides a simple interface to interact with Hugging Face's models for image generation. You can easily generate images by specifying parameters via HTTP requests.
 
 ## Features
 
-- **High-Quality Images**: Generate detailed and attractive visuals.
-- **Customizable Parameters**: Adjust settings to influence image style and content.
-- **Node.js Integration**: Easily integrate with other Node.js projects.
+- **Image Generation**: Generate images using Hugging Face models.
+- **Customizable Models**: Select from multiple models to suit your needs.
+- **Simple API**: Easy-to-use HTTP interface for generating images.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or later)
+- An [Hugging Face account](https://huggingface.co/join) to obtain an API key
 
 ## Installation
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/flux-image-generator-ai.git
+    git clone https://github.com/sarkardocs/flux.git
     ```
 
 2. **Navigate to the Project Directory**:
     ```bash
-    cd flux-image-generator-ai
+    cd flux
     ```
 
 3. **Install Dependencies**:
@@ -29,40 +34,50 @@ Flux Image Generator AI is designed for developers and artists who want to creat
     npm install
     ```
 
+4. **Obtain Hugging Face API Key**:
+
+   - Sign up or log in to [Hugging Face](https://huggingface.co/).
+   - Go to your [API tokens page](https://huggingface.co/settings/tokens).
+   - Generate a new API token and copy it.
+
+5. **Set Your API Key**:
+   - Open the `index.js` file.
+   - Replace the placeholder API key in the `HF_API_KEY` constant with your actual API key.
+
 ## Usage
 
-1. **Run the Image Generator**:
+1. **Start the Server**:
     ```bash
-    node generateImage.js --input "your_input_parameters"
+    node index.js
     ```
 
-2. **Configure Parameters**: Modify the input parameters to customize the image output.
+2. **Generate an Image**:
+   - Make a GET request to the `/api/flux` endpoint with query parameters `gen` and `model`. For example:
+     ```bash
+     curl "http://localhost:3000/api/flux?gen=your_input_parameters&model=1/2"
+     ```
 
-3. **View Results**: Generated images will be saved in the `output/` directory.
+   - Replace `your_input_parameters` with the text or parameters you want to use for image generation, and `model` with `1` or `2` depending on which model you want to use.
+
+## API Endpoints
+
+### `GET /api/flux`
+
+- **Query Parameters**:
+  - `gen`: Input parameters for image generation.
+  - `model`: Model selection (`1` or `2`).
+
+- **Responses**:
+  - **200 OK**: The generated image.
+  - **400 Bad Request**: Missing or invalid query parameters.
+  - **500 Internal Server Error**: Error querying the Hugging Face API.
 
 ## Example
 
-Generate an image with specific parameters:
+To generate an image using model `1`:
 
 ```bash
-node generateImage.js --style "abstract" --resolution "1024x768"
-```
-
-## API
-
-Use the image generator programmatically:
-
-```javascript
-const { generateImage } = require('./imageGenerator');
-
-generateImage({
-  style: 'abstract',
-  resolution: '1024x768'
-}).then(imagePath => {
-  console.log('Image saved at:', imagePath);
-}).catch(error => {
-  console.error('Error generating image:', error);
-});
+curl "http://localhost:3000/api/flux?gen=example_image_parameters&model=1" --output generated_image.png
 ```
 
 ## Contributing
@@ -83,9 +98,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 For questions or feedback, please reach out to:
 
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **GitHub Issues**: [Create an Issue](https://github.com/yourusername/flux-image-generator-ai/issues)
+- **Email**: [sarkardocss@gmail.com](mailto:sardocss@gmail.com)
+- **GitHub Issues**: [Create an Issue](https://github.com/sarkardocs/flux/issues)
 
-Thank you for using Flux Image Generator AI!
-
----
+Thank you for using the Flux Image Generator API!
