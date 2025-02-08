@@ -11,7 +11,7 @@ Generate images using Hugging Face’s models with Node.js.
 
 1. **Clone**:
     ```bash
-    git clone https://github.com/sarkardocs/Flux.git
+    git clone https://github.com/seashoviric/Flux.git
     ```
 
 2. **Install**:
