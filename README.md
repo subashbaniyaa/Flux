@@ -11,7 +11,7 @@ Generate images using Hugging Face’s models with Node.js.
 
 1. **Clone**:
     ```bash
-    git clone https://github.com/seashoviric/Flux.git
+    git clone https://github.com/forcodespace/Flux.git
     ```
 
 2. **Install**:
@@ -55,7 +55,7 @@ Generate images using Hugging Face’s models with Node.js.
 
 ## Contact
 
-- **Email**: [sarkardocss@gmail.com](mailto:sarkardocss@gmail.com)
-- **Issues**: [GitHub Issues](https://github.com/sarkardocs/Flux/issues)
+- **Email**: [sarkardocss@gmail.com](mailto:forcodespace@gmail.com)
+- **Issues**: [GitHub Issues](https://github.com/forcodespace/Flux/issues)
 
 Thank you for using Flux Image Generator API!
