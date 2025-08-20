@@ -55,7 +55,7 @@ Generate images using Hugging Face’s models with Node.js.
 
 ## Contact
 
-- **Email**: [forcodespace@gmail.com](mailto:forcodespace@gmail.com)
+- **Email**: [abcdocss@gmail.com](mailto:forcodespace@gmail.com)
 - **Issues**: [GitHub Issues](https://github.com/forcodespace/Flux/issues)
 
 Thank you for using Flux Image Generator API!
