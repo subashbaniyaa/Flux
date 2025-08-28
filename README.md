@@ -1,4 +1,4 @@
-**Flux Text To Image API**
+**Flux Dev & Schnell Text To Image API**
 
 Generate images using Hugging Face’s models with Node.js.
 
